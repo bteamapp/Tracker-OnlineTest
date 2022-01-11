@@ -19,7 +19,7 @@ showChat.addEventListener("click", () => {
   document.querySelector(".header__back").style.display = "block";
 });
 
-const user = prompt("Enter your name to join this meet");
+const user = prompt("Nhập tên thiết bị (điện thoại/máy tính/Webcam)");
 
 var peer = new Peer(undefined, {
   path: "/peerjs",
@@ -91,7 +91,7 @@ text.addEventListener("keydown", (e) => {
 const inviteButton = document.querySelector("#inviteButton");
 const muteButton = document.querySelector("#muteButton");
 const stopVideo = document.querySelector("#stopVideo");
-muteButton.addEventListener("click", () => {
+muteButton.addEventListener("onLoad", () => {
   const enabled = myVideoStream.getAudioTracks()[0].enabled;
   if (enabled) {
     myVideoStream.getAudioTracks()[0].enabled = false;
